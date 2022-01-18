@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body {
+    background: #eee;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #777;
+    height: 80px;
+}
+
+.header .logo {
+    margin: 10px;
+    color: #fff;
+}
+
+.header .navbar a {
+    margin: 10px;
+    color: #fff; 
+}
+/* search box style */
+.header .search {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 5px #777;
+    overflow: hidden;
+}
+
+.header .search.active {
+    width: 360px;
+}
+
+/* search icon create */
+.header .search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.header .search .icon::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #777;
+    border-radius: 50%;
+    transform: translate(-4px, -4px);
+}
+
+.header .search .icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: #777;
+    transform: translate(6px, 6px) rotate(315deg);
+}
+
+/* search input style */
+.header .search .input {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+/* search clear style */
+.header .search .clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .search .clear::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #777;
+    transform: rotate(45deg);
+}
+
+.header .search .clear::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #777;
+    transform: rotate(-45deg);
+}
